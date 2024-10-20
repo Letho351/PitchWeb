@@ -35,6 +35,50 @@ body{
   margin-left:40px;
 }
 
+.C2{
+  background-color: silver;
+  padding: 20px 45px;  
+  display:flex;
+  justify-content: center;
+}
+
+.C2-inner{
+  max-width:900px;
+}
+
+.C2 h1{
+  font-weight:normal;
+  font-size:2rem;
+  margin: 0;
+}
+
+.C2 p{
+  line-height:1.7;
+}
+
+.Button{
+  background-color: #EC7914;
+  Color: yellow;
+  text-decoration:none;
+  padding: 10px 12px;
+  border-radius: 12px;    
+  display: inline-block;
+} 
+
+.C2-inner a:hover{
+  color:red;
+}
+
+.Features{
+  background-color: #c27d15;
+  padding: 20px 45px;
+}
+
+.feature-innter{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* Mobile Responsive */
 @media only screen and (max-width: 600px) {
   .header {
