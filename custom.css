@@ -11,9 +11,13 @@ body {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  animation: gradientMenuBG 10s infinite alternate; /* Added color transition to header */
 }
 
-/* Navigation Menu Adjustments for Right Alignment */
+.header h1 {
+  animation: gradientText 10s infinite alternate; /* Gradient transition on the PitchCS logo text */
+}
+
 .C1 {
   list-style: none;
   padding: 0;
@@ -28,6 +32,7 @@ body {
   text-decoration: none;
   display: block;
   transition: all 0.3s ease-out;
+  animation: gradientText 10s infinite alternate; /* Added gradient transition to menu items */
 }
 
 .C1 a:hover {
@@ -44,7 +49,6 @@ body {
   padding: 20px 45px;
   display: flex;
   justify-content: center;
-  animation: gradientBG 10s infinite alternate; /* Added color transition */
 }
 
 .C2-inner {
@@ -84,8 +88,8 @@ body {
   margin: 0 auto;
 }
 
-/* Gradient background color transition for .C2 */
-@keyframes gradientBG {
+/* Gradient background color transition for menu and logo */
+@keyframes gradientMenuBG {
   0% {
     background-color: #EC7914; /* Start color */
   }
@@ -94,6 +98,18 @@ body {
   }
   100% {
     background-color: #d500f9; /* End color */
+  }
+}
+
+@keyframes gradientText {
+  0% {
+    color: white; /* Start color */
+  }
+  50% {
+    color: #ff3d00; /* Transition color */
+  }
+  100% {
+    color: #d500f9; /* End color */
   }
 }
 
