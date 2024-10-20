@@ -8,8 +8,9 @@ body{
   background-color: #EC7914;
   color: white;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items:center;
+  position: relative; /* Allows positioning inside the header */
 }
 
 .C1 a {
@@ -29,6 +30,8 @@ body{
   padding:0;
   margin:0;
   display: flex;
+  position: absolute;
+  right: 45px; /* Position the menu to the right */
 }
 
 .C1 li {
@@ -83,13 +86,14 @@ body{
 @media only screen and (max-width: 600px) {
   .header {
     padding: 0 20px;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
   }
 
   .C1 {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end; /* Align to the right on small screens */
+    right: 0; /* Keep the menu to the right */
   }
 
   .C1 li {
@@ -102,3 +106,4 @@ body{
     font-size: 18px;
   }
 }
+
