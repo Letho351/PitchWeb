@@ -11,7 +11,6 @@ body {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  animation: gradientMenuBG 10s infinite alternate; /* Added color transition to header */
 }
 
 .header h1 {
@@ -88,19 +87,7 @@ body {
   margin: 0 auto;
 }
 
-/* Gradient background color transition for menu and logo */
-@keyframes gradientMenuBG {
-  0% {
-    background-color: #EC7914; /* Start color */
-  }
-  50% {
-    background-color: #ff3d00; /* Transition color */
-  }
-  100% {
-    background-color: #d500f9; /* End color */
-  }
-}
-
+/* Gradient text color transition for menu and logo */
 @keyframes gradientText {
   0% {
     color: white; /* Start color */
