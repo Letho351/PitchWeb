@@ -10,7 +10,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  flex-direction: column; /* Ensure logo stays above menu on mobile */
 }
 
 .header h1 {
@@ -21,9 +21,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  position: absolute;
-  right: 45px; /* Aligns the menu to the right */
+  display: flex; /* Keep menu horizontal */
 }
 
 .C1 a {
@@ -31,7 +29,7 @@ body {
   text-decoration: none;
   display: block;
   transition: all 0.3s ease-out;
-  animation: gradientText 10s infinite alternate; /* Added gradient transition to menu items */
+  animation: gradientText 10s infinite alternate; /* Gradient transition on menu items */
 }
 
 .C1 a:hover {
@@ -104,19 +102,19 @@ body {
 @media only screen and (max-width: 600px) {
   .header {
     padding: 0 20px;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column; /* Ensure logo stays on top of menu */
+    align-items: center;
   }
 
   .C1 {
-    flex-direction: column;
-    align-items: flex-start;
-    right: 0;
+    justify-content: center; /* Keep the menu centered and horizontal */
+    flex-direction: row; /* Maintain horizontal direction */
+    margin-top: 10px; /* Add spacing between logo and menu */
   }
 
   .C1 li {
-    margin-left: 0;
-    margin-bottom: 10px;
+    margin-left: 20px; /* Adjust spacing between menu items */
+    margin-bottom: 0;
   }
 
   .C1 a {
