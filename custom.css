@@ -12,7 +12,7 @@
 }
 
 .animate__shakeX {
-  animation: shakeX 5s ease-in-out 1s infinite; /* Shake for 2s */
+  animation: shakeX 6s ease-in-out 1s infinite; /* Shake for 2s */
   animation-delay: 8s; /* Wait for 7 seconds between shakes */
   animation-iteration-count: infinite; /* Loop infinitely */
 }
