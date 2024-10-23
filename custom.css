@@ -183,7 +183,13 @@ body {
 .SnackDashboard {
   background-color: lightblue;
   padding: 20px 45px;
-  width: 100%;
+ color: Peach;
+  display: flex;
+  align-items: center;
 
+}
+  .SnackDashboar-inner { 
+     max-width: 1200px;
+  margin: 0 auto;
 }
 }
