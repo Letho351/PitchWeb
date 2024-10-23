@@ -193,8 +193,7 @@ body {
 
 .SnackDashboard-inner {
   max-width: 1200px;
-  width: 100%;
-  text-align: center;
+  margin: 0 auto;
 }
 
 .SnackDashboard h1 {
