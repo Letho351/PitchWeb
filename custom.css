@@ -179,6 +179,7 @@ body {
     padding: 10px;
     font-size: 18px;
   }
+/* Snack Dashboard Section */
 .SnackDashboard {
   background-color: lightblue;
   padding: 20px 45px;
@@ -189,24 +190,37 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .SnackDashboard-inner {
   max-width: 1200px;
   width: 100%;
   text-align: center;
 }
+
 .SnackDashboard h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
   word-wrap: break-word;
 }
-  .SnackDashboard p {
+
+.SnackDashboard p {
   font-size: 1.2rem;
   line-height: 1.5;
 }
+
+/* Ensure content fits within the viewport height */
 .SnackDashboard {
   height: 100vh;
   overflow: hidden;
 }
+
+/* Gradient text color transition */
+@keyframes gradientText {
+  0% { color: #ffffff; }
+  100% { color: #76ff03; }
+}
+
+/* Flip animation */
 @keyframes flip {
   0% {
     transform: perspective(400px) rotateY(0);
@@ -222,7 +236,16 @@ body {
 .animate__flip {
   animation: flip 6s ease-in-out infinite; /* Apply the flip animation */
 }
-   .SnackDashboard {
+
+/* Mobile Responsive */
+@media only screen and (max-width: 600px) {
+  .header {
+    padding: 0 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+ /* Adjust the Snack Dashboard for mobile */
+  .SnackDashboard {
     padding: 15px 20px;
     height: auto;
   }
@@ -233,11 +256,26 @@ body {
 
   .SnackDashboard p {
     font-size: 1rem;
+   
+this frsit code is with the flip code on dash borad 
+
+/* shakeX animation */
+@keyframes shakeX {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
   }
 }
 
-/* Flip animation for Snack Dashboard */
-.SnackDashboard-inner {
-  animation: flip 6s ease-in-out infinite; /* Apply flip animation to the entire section */
+.animate__shakeX {
+  animation: shakeX 6s ease-in-out 1s infinite; /* Shake for 2s */
+  animation-delay: 8s; /* Wait for 7 seconds between shakes */
+  animation-iteration-count: infinite; /* Loop infinitely */
 }
+
 }
