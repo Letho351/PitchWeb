@@ -179,4 +179,65 @@ body {
     padding: 10px;
     font-size: 18px;
   }
+.SnackDashboard {
+  background-color: lightblue;
+  padding: 20px 45px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.SnackDashboard-inner {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+.SnackDashboard h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+  .SnackDashboard p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+.SnackDashboard {
+  height: 100vh;
+  overflow: hidden;
+}
+@keyframes flip {
+  0% {
+    transform: perspective(400px) rotateY(0);
+  }
+  50% {
+    transform: perspective(400px) rotateY(180deg);
+  }
+  100% {
+    transform: perspective(400px) rotateY(0);
+  }
+}
+
+.animate__flip {
+  animation: flip 6s ease-in-out infinite; /* Apply the flip animation */
+}
+   .SnackDashboard {
+    padding: 15px 20px;
+    height: auto;
+  }
+
+  .SnackDashboard h1 {
+    font-size: 1.8rem;
+  }
+
+  .SnackDashboard p {
+    font-size: 1rem;
+  }
+}
+
+/* Flip animation for Snack Dashboard */
+.SnackDashboard-inner {
+  animation: flip 6s ease-in-out infinite; /* Apply flip animation to the entire section */
+}
 }
