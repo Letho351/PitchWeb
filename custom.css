@@ -309,8 +309,8 @@ body {
 
 /* Gradient text color transition for menu and logo */
 @keyframes gradientText {
-  0% {
-    color: #ffffff; /* White */
+ 46.66% {
+    color: #673ab7; /* Deep Purple */
   }
   6.66% {
     color: #ffeb3b; /* Yellow */
