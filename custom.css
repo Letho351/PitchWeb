@@ -139,11 +139,7 @@ body {
   overflow: hidden;
 }
 
-/* Gradient text color transition */
-@keyframes gradientText {
-  0% { color: #ffffff; }
-  100% { color: #76ff03; }
-}
+
 
 /* Flip animation */
 @keyframes flip {
