@@ -1,4 +1,4 @@
-//* shakeX animation */
+
 @keyframes shakeX {
   from, to {
     transform: translate3d(0, 0, 0);
@@ -199,7 +199,7 @@ body {
   .SnackDashboard p {
     font-size: 1rem;
    
-this frsit code is with the flip code on dash borad 
+
 
 /* shakeX animation */
 @keyframes shakeX {
@@ -381,7 +381,5 @@ body {
   .C1 a {
     padding: 10px;
     font-size: 18px;
-  }
-  
-  
+  } 
 }
