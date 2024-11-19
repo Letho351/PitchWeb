@@ -139,7 +139,13 @@ body {
   overflow: hidden;
 }
 
-
+@keyframes gradientText {
+  0% { color: #ffffff; }
+  25% { color: #76ff03; }
+  50% { color: #1de9b6; }
+  75% { color: #ff5722; }
+  100% { color: #3f51b5; }
+}
 
 /* Flip animation */
 @keyframes flip {
@@ -304,56 +310,6 @@ body {
 }
 
 /* Gradient text color transition for menu and logo */
-@keyframes gradientText {
- 46.66% {
-    color: #673ab7; /* Deep Purple */
-  }
-  6.66% {
-    color: #ffeb3b; /* Yellow */
-  }
-  13.33% {
-    color: #00e676; /* Green */
-  }
-  20% {
-    color: #1de9b6; /* Teal */
-  }
-  26.66% {
-    color: #00bcd4; /* Cyan */
-  }
-  33.33% {
-    color: #2196f3; /* Blue */
-  }
-  40% {
-    color: #3f51b5; /* Indigo */
-  }
-  46.66% {
-    color: #673ab7; /* Deep Purple */
-  }
-  53.33% {
-    color: #9c27b0; /* Purple */
-  }
-  60% {
-    color: #e91e63; /* Pink */
-  }
-  66.66% {
-    color: #ff5722; /* Orange */
-  }
-  73.33% {
-    color: #795548; /* Brown */
-  }
-  80% {
-    color: #9e9e9e; /* Gray */
-  }
-  86.66% {
-    color: #607d8b; /* Blue Gray */
-  }
-  93.33% {
-    color: #ffd740; /* Amber */
-  }
-  100% {
-    color: #76ff03; /* Light Green */
-  }
-}
 
 /* Mobile Responsive */
 @media only screen and (max-width: 600px) {
