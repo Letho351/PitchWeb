@@ -6,7 +6,8 @@ body, h1, p, a, button, img {
 }
 
 body {
-  font-family: Arial, sans-serif;
+ 
+ font-family: Kanit;
   background-color: #F3E8CA;
   color: #322505;
 }
@@ -16,7 +17,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 20px 50px;
   background: #FA802F;
   color: #FFF;
 }
@@ -28,7 +29,7 @@ header h1 {
 .header-right {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 17px;
 }
 
 /* Search */
@@ -59,7 +60,7 @@ header h1 {
   position: absolute;
   top: 40px;
   right: 10px;
-  background: #322505;
+  background: #05321b;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
