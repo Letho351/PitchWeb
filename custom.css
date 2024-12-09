@@ -1,192 +1,337 @@
-/* General Reset */
-body, h1, p, a, button, img {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@keyframes shakeX {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+.animate__shakeX {
+  animation: shakeX 6s ease-in-out 1s infinite;
+  animation-delay: 8s;
+  animation-iteration-count: infinite;
 }
 
 body {
+  margin: 0;
   font-family: Kanit;
-  background-color: #F3E8CA;
-  color: #322505;
 }
 
-/* Header */
-header {
+.header {
+  padding: 0 45px;
+  background-color: #EC7914;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
-  background: #FA802F;
-  color: #FFF;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); 
+  flex-direction: column;
 }
 
-header h1 {
-  font-size: 1.5rem;
+.header h1 {
+  animation: gradientText 10s infinite alternate;
 }
 
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 17px;
-}
-
-/* Search */
-.search button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 5px;
-}
-
-.search button svg {
-  width: 24px;
-  height: 24px;
-  stroke: white;
-}
-
-/* Menu */
-.menu button {
-  background: none;
-  border: none;
-  color: #FFF;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.menu .dropdown {
-  display: none;
-  position: absolute;
-  top: 40px;
-  right: 10px;
-  background: #05321b;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.menu .dropdown a {
-  display: block;
-  padding: 10px;
-  color: #FFF;
-  font-size: 1rem;
-  transition: background 0.3s;
-}
-
-.menu .dropdown a:hover {
-  background: #FA802F;
-}
-
-.slogan {
-  text-align: center;
-  font-size: 3rem; /* Adjust size as needed */
-  font-weight: bold;
-  margin-top: 50px; /* Space between header and slogan */
-  color: #FA802F; /* Matches your theme */
-  font-family: 'Kanit', sans-serif; /* Matches the selected font */
-}
-
-/* Flavor Segments */
-.flavor-segments {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 50px auto;
-  padding: 0 50px;
-  max-width: 1200px;
-}
-
-.flavor-segment {
-  background-color: #FFF7E6; /* Light background */
-  border: 3px solid #FA802F; /* Matches theme */
-  border-radius: 15px;
-  padding: 20px;
-  width: 45%; /* Equal segments */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
-  text-align: center;
-  transform: scale(1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover scaling effect */
-}
-
-.flavor-segment:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
-}
-
-.flavor-segment h2 {
-  font-size: 2rem;
-  color: #FA802F;
-  margin-bottom: 15px;
-  animation: bounceIn 1s ease; /* Entrance animation */
-}
-
-.flavor-segment p {
-  font-size: 1rem;
-  color: #322505;
-  margin-bottom: 20px;
-}
-
-.flavor-segment ul {
-  list-style-type: none;
+.C1 {
+  list-style: none;
   padding: 0;
+  margin: 0;
+  display: flex;
 }
 
-.flavor-segment li {
-  font-size: 1rem;
-  margin: 10px 0;
-  color: #322505;
-  font-weight: bold;
-  transition: transform 0.3s ease; /* Hover effect on list items */
+.C1 a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease-out;
+  animation: gradientText 10s infinite alternate;
 }
 
-.flavor-segment li:hover {
-  transform: scale(1.2);
-  color: #FA802F;
+.C1 a:hover {
+  color: red;
+  transform: rotate(10deg);
 }
 
-/* Bounce animation for heading */
-@keyframes bounceIn {
+.C1 li {
+  margin-left: 40px;
+}
+
+.C2 {
+  background-color: silver;
+  padding: 20px 45px;
+  display: flex;
+  justify-content: center;
+}
+
+.C2-inner {
+  max-width: 900px;
+}
+
+.C2 h1 {
+  font-weight: normal;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.C2 p {
+  line-height: 1.7;
+}
+
+.Button {
+  background-color: #EC7914;
+  color: yellow;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.C2-inner a:hover {
+  color: red;
+}
+
+.Features {
+  background-color: #c27d15;
+  padding: 20px 45px;
+}
+
+.feature-innter {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Snack Dashboard Section */
+.SnackDashboard {
+  background-color: lightblue;
+  padding: 20px 45px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.SnackDashboard-inner {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.SnackDashboard h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+.SnackDashboard p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Ensure content fits within the viewport height */
+.SnackDashboard {
+  height: 100vh;
+  overflow: hidden;
+}
+
+@keyframes gradientText {
+  0% { color: #ffffff; }
+  25% { color: #76ff03; }
+  50% { color: #1de9b6; }
+  75% { color: #ff57ff; }
+  100% { color: #3f51b5; }
+}
+
+/* Flip animation */
+@keyframes flip {
   0% {
-      transform: scale(0.8);
-      opacity: 0;
+    transform: perspective(400px) rotateY(0);
   }
   50% {
-      transform: scale(1.1);
-      opacity: 0.5;
+    transform: perspective(400px) rotateY(180deg);
   }
   100% {
-      transform: scale(1);
-      opacity: 1;
+    transform: perspective(400px) rotateY(0);
   }
 }
 
-/* Shake animation */
-@keyframes shake {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  50% { transform: translateX(5px); }
-  75% { transform: translateX(-5px); }
-  100% { transform: translateX(0); }
+.animate__flip {
+  animation: flip 6s ease-in-out infinite; /* Apply the flip animation */
 }
 
-.shake {
-  animation: shake 0.5s ease; 
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .flavor-segments {
-    flex-direction: column; /* Stack segments vertically */
+/* Mobile Responsive */
+@media only screen and (max-width: 600px) {
+  .header {
     padding: 0 20px;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .flavor-segment {
-    margin: 15px 0; /* Add vertical spacing between stacked segments */
-    width: 100%; /* Full width for each segment */
+
+  .C1 {
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 10px;
   }
-  
-  .slogan {
-    font-size: 2rem; /* Reduce slogan size for mobile */
+
+  .C1 li {
+    margin-left: 20px;
+    margin-bottom: 0;
   }
+
+  .C1 a {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  /* Adjust the Snack Dashboard for mobile */
+  .SnackDashboard {
+    padding: 15px 20px;
+    height: auto;
+  }
+
+  .SnackDashboard h1 {
+    font-size: 1.8rem;
+  }
+
+  .SnackDashboard p {
+    font-size: 1rem;
+   
+
+
+/* shakeX animation */
+@keyframes shakeX {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+.animate__shakeX {
+  animation: shakeX 6s ease-in-out 1s infinite; /* Shake for 2s */
+  animation-delay: 8s; /* Wait for 7 seconds between shakes */
+  animation-iteration-count: infinite; /* Loop infinitely */
+}
+
+body {
+  margin: 0;
+  font-family: Kanit;
+}
+
+.header {
+  padding: 0 45px;
+  background-color: #EC7914;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column; /* Ensure logo stays above menu on mobile */
+}
+
+.header h1 {
+  animation: gradientText 10s infinite alternate; /* Gradient transition on the PitchCS logo text */
+}
+
+.C1 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Keep menu horizontal */
+}
+
+.C1 a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease-out;
+  animation: gradientText 10s infinite alternate; /* Gradient transition on menu items */
+}
+
+.C1 a:hover {
+  color: red;
+  transform: rotate(10deg);
+}
+
+.C1 li {
+  margin-left: 40px;
+}
+
+.C2 {
+  background-color: silver;
+  padding: 20px 45px;
+  display: flex;
+  justify-content: center;
+}
+
+.C2-inner {
+  max-width: 900px;
+}
+
+.C2 h1 {
+  font-weight: normal;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.C2 p {
+  line-height: 1.7;
+}
+
+.Button {
+  background-color: #EC7914;
+  color: yellow;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.C2-inner a:hover {
+  color: red;
+}
+
+.Features {
+  background-color: #c27d15;
+  padding: 20px 45px;
+}
+
+.feature-innter {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Gradient text color transition for menu and logo */
+
+/* Mobile Responsive */
+@media only screen and (max-width: 600px) 
+{
+  .header {
+    padding: 0 20px;
+    flex-direction: column; /* Ensure logo stays on top of menu */
+    align-items: center;
+  }
+
+  .C1 {
+    justify-content: center; /* Keep the menu centered and horizontal */
+    flex-direction: row; /* Maintain horizontal direction */
+    margin-top: 10px; /* Add spacing between logo and menu */
+  }
+
+  .C1 li {
+    margin-left: 20px; /* Adjust spacing between menu items */
+    margin-bottom: 0;
+  }
+
+  .C1 a {
+    padding: 10px;
+    font-size: 18px;
+  } 
 }
