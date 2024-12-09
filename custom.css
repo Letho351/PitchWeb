@@ -6,8 +6,7 @@ body, h1, p, a, button, img {
 }
 
 body {
- 
- font-family: Kanit;
+  font-family: Kanit;
   background-color: #F3E8CA;
   color: #322505;
 }
@@ -78,5 +77,102 @@ header h1 {
 .menu .dropdown a:hover {
   background: #FA802F;
 }
+
+.slogan {
+  text-align: center;
+  font-size: 3rem; /* Adjust size as needed */
+  font-weight: bold;
+  margin-top: 50px; /* Space between header and slogan */
+  color: #FA802F; /* Matches your theme */
+  font-family: 'Kanit', sans-serif; /* Matches the selected font */
+}
+
+/* Flavor Segments */
+.flavor-segments {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 50px auto;
+  padding: 0 50px;
+  max-width: 1200px;
+}
+
+.flavor-segment {
+  background-color: #FFF7E6; /* Light background */
+  border: 3px solid #FA802F; /* Matches theme */
+  border-radius: 15px;
+  padding: 20px;
+  width: 45%; /* Equal segments */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
+  text-align: center;
+  transform: scale(1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover scaling effect */
+}
+
+.flavor-segment:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+.flavor-segment h2 {
+  font-size: 2rem;
+  color: #FA802F;
+  margin-bottom: 15px;
+  animation: bounceIn 1s ease; /* Entrance animation */
+}
+
+.flavor-segment p {
+  font-size: 1rem;
+  color: #322505;
+  margin-bottom: 20px;
+}
+
+.flavor-segment ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.flavor-segment li {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #322505;
+  font-weight: bold;
+  transition: transform 0.3s ease; /* Hover effect on list items */
+}
+
+.flavor-segment li:hover {
+  transform: scale(1.2);
+  color: #FA802F;
+}
+
+/* Bounce animation for heading */
+@keyframes bounceIn {
+  0% {
+      transform: scale(0.8);
+      opacity: 0;
+  }
+  50% {
+      transform: scale(1.1);
+      opacity: 0.5;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+/* Shake animation */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.5s ease; /* Duration is 0.5s */
+}
+
 
 
