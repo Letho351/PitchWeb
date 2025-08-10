@@ -2,125 +2,290 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>myUNISA – Examination Results</title>
+  <title>myUNISA – Assignments & Examinations</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Hide the results section initially */
-    .results {
-      display: none;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    .header {
+      background-color: white;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff6600;
+    }
+    .logo span {
+      color: black;
+    }
+    .nav {
+      display: flex;
+      gap: 10px;
+    }
+    .btn {
+      padding: 6px 12px;
+      border: 1px solid #aaa;
+      background-color: white;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    .btn.orange {
+      background-color: #ff6600;
+      color: white;
+      border: none;
+    }
+    .user-dropdown {
+      font-size: 14px;
+      color: #004b87;
+    }
+    .topmenu {
+      background-color: #333;
+      color: white;
+      display: flex;
+      padding: 10px;
+      gap: 20px;
+    }
+    .topmenu a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .breadcrumb {
+      background-color: #eee;
+      padding: 8px 20px;
+      font-size: 14px;
+    }
+    .container {
+      display: flex;
+      padding: 20px;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+    .sidebar a {
+      display: block;
+      padding: 8px 5px;
+      font-size: 14px;
+      color: #004b87;
+      text-decoration: none;
+      border-bottom: 1px solid #eee;
+    }
+    .sidebar a:hover {
+      background-color: #f2f2f2;
+    }
+    .content {
+      flex: 1;
+      background-color: white;
+      border: 1px solid #ddd;
+      margin-left: 20px;
+      padding: 20px;
+    }
+    .page { display: none; }
+    .results { display: none; }
+    .active { display: block; }
+    .footer {
+      background-color:#333;
+      color:white;
+      padding:20px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .footer-section {
+      flex:1;
+      min-width:200px;
+    }
+    .footer-section.center {
+      text-align:center;
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="logo">
-      <span>my</span>UNISA
+
+  <!-- HOME PAGE -->
+  <div id="home" class="page active">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo"><span>my</span>UNISA</div>
+      <nav class="nav">
+        <button class="btn">myModules</button>
+        <button class="btn orange">myAdmin</button>
+      </nav>
+      <div class="user-dropdown">N LEBOGO ▼</div>
+    </header>
+
+    <!-- Top Menu -->
+    <div class="topmenu">
+      <a href="#">Applications</a>
+      <a href="#">Student Support & Regions</a>
+      <a href="#">Assignments & Examinations</a>
+      <a href="#">Student Affairs & SRC</a>
+      <a href="#">News & Events</a>
+      <a href="#">Library</a>
+      <a href="#">Enquiries</a>
     </div>
-    <nav class="nav">
-      <button class="btn">myModules</button>
-      <button class="btn orange">myAdmin</button>
-    </nav>
-    <div class="user-dropdown">LEBOGO, NEO</div>
-  </header>
 
-  <!-- Submenu Navigation -->
-  <nav class="submenu">
-    <ul>
-      <li><a href="#">myAdmin</a></li>
-      <li><a href="#">Student Admin ▼</a></li>
-      <li><a href="#">Study Material ▼</a></li>
-      <li><a href="#">Student Finance ▼</a></li>
-      <li><a href="#">Assessment Admin ▼</a></li>
-      <li><a href="#">Teaching Practice ▼</a></li>
-      <li><a href="#">Password Management ▼</a></li>
-    </ul>
-  </nav>
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      Home / Assignments & Examinations / Examinations
+    </div>
 
-  <!-- Breadcrumb -->
-  <div class="breadcrumb">
-    Home / <strong>myAdmin</strong>
+    <!-- Main Section -->
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <a href="#">Aegrotat and Special Exams</a>
+        <a href="#">Examination dates and timetables</a>
+        <a href="#">Your step-by-step guide for successful online examinations</a>
+        <a href="#">Examination fees</a>
+        <a href="#" id="examResultsBtn">Examination results</a>
+        <a href="#">Re-marking</a>
+        <a href="#">Semester or year course examinations</a>
+        <a href="#">Supplementary examinations</a>
+        <a href="#">Students with Special Needs</a>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <h2>Examinations</h2>
+        <p>
+          Here is where all your hard work pays off. Exams can be stressful, but proper preparation
+          can make the process smoother and less daunting. UNISA offers a variety of online tools 
+          and resources to guide you through your examination journey.
+        </p>
+        <p>
+          Use the links on the left to navigate through important examination information, 
+          including dates, timetables, fees, and results. The "Examination results" section 
+          will display your latest marks once they are officially released.
+        </p>
+        <p>
+          Please note that all examination results are provisional until confirmed by the official 
+          academic record. If you believe there is an error in your results, you may apply for 
+          re-marking within the allowed period.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <!-- Main Content -->
-  <main class="container">
-    <h2>Examination Results</h2>
-    <form class="form">
-      <label>Exam Year *</label>
-      <input type="text" value="2025" required>
+  <!-- EXAM RESULTS PAGE -->
+  <div id="examPage" class="page">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo"><span>my</span>UNISA</div>
+      <nav class="nav">
+        <button class="btn" id="backHomeBtn">Home</button>
+        <button class="btn orange">myAdmin</button>
+      </nav>
+      <div class="user-dropdown">N LEBOGO ▼</div>
+    </header>
 
-      <label>Examination Period *</label>
-      <select>
-        <option>May/June</option>
-        <option>October/November</option>
-      </select>
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      Home / Assignments & Examinations / Examination results
+    </div>
 
-      <div class="buttons">
-        <button type="button" class="btn grey" id="displayBtn">Display</button>
-        <button type="button" class="btn grey">Apply for Exam Script Remark</button>
+    <!-- Main Content -->
+    <main class="container" style="display:block;">
+      <div class="content" style="flex:1;">
+        <h2>Examination Results</h2>
+        <form class="form">
+          <label>Exam Year *</label>
+          <input type="text" value="2025" required>
+
+          <label>Examination Period *</label>
+          <select>
+            <option>May/June</option>
+            <option>October/November</option>
+          </select>
+
+          <div class="buttons" style="margin-top:10px;">
+            <button type="button" class="btn grey" id="displayBtn">Display</button>
+            <button type="button" class="btn grey">Apply for Exam Script Remark</button>
+          </div>
+        </form>
+
+        <section class="results" id="resultsSection" style="margin-top:20px;">
+          <h3>Results for 29077974 extracted on 2025-08-07 19:06</h3>
+          <table border="1" cellpadding="5" cellspacing="0">
+            <thead>
+              <tr>
+                <th>Course</th>
+                <th>Final Mark</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><a href="#">AUE1501</a></td><td>70</td><td>Passed</td></tr>
+              <tr><td><a href="#">PUB1501</a></td><td>59</td><td>Passed</td></tr>
+              <tr><td><a href="#">PUB1502</a></td><td>59</td><td>Passed</td></tr>
+              <tr><td><a href="#">PUB1503</a></td><td>63</td><td>Passed</td></tr>
+              <tr><td><a href="#">PUB1504</a></td><td>55</td><td>Passed</td></tr>
+            </tbody>
+          </table>
+        </section>
       </div>
-    </form>
-
-    <section class="results" id="resultsSection">
-      <h3>Results for 29077974 extracted on 2025-08-07 19:06</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Course</th>
-            <th>Final Mark</th>
-            <th>Result</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><a href="#">AUE1501</a></td>
-            <td>70</td>
-            <td>Passed</td>
-          </tr>
-          <tr>
-            <td><a href="#">PUB1501</a></td>
-            <td>59</td>
-            <td>Passed</td>
-          </tr>
-          <tr>
-            <td><a href="#">PUB1502</a></td>
-            <td>59</td>
-            <td>Passed</td>
-          </tr>
-          <tr>
-            <td><a href="#">PUB1503</a></td>
-            <td>63</td>
-            <td>Passed</td>
-          </tr>
-          <tr>
-            <td><a href="#">PUB1504</a></td>
-            <td>55</td>
-            <td>Passed</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-  </main>
+    </main>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-section left">
-      <p>University of South Africa<br>
-         P O Box 392<br>
-         Unisa<br>
-         0003</p>
+      <p>
+        University of South Africa<br>
+        P O Box 392<br>
+        Unisa<br>
+        0003
+      </p>
     </div>
     <div class="footer-section center">
-      <p>Terms & Conditions<br>
-         Copyright<br>
-         University of South Africa</p>
+      <p>
+        Terms & Conditions<br>
+        Copyright<br>
+        University of South Africa
+      </p>
     </div>
   </footer>
 
-  <!-- Script to show results -->
+  <!-- Script -->
   <script>
-    document.getElementById('displayBtn').addEventListener('click', function() {
-      document.getElementById('resultsSection').style.display = 'block';
+    document.addEventListener("DOMContentLoaded", function() {
+      const homePage = document.getElementById("home");
+      const examPage = document.getElementById("examPage");
+      const resultsSection = document.getElementById("resultsSection");
+
+      const examResultsBtn = document.getElementById("examResultsBtn");
+      const backHomeBtn = document.getElementById("backHomeBtn");
+      const displayBtn = document.getElementById("displayBtn");
+
+      // Go to Exam Results Page
+      examResultsBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        homePage.classList.remove("active");
+        examPage.classList.add("active");
+      });
+
+      // Go back to Home Page
+      backHomeBtn.addEventListener("click", function() {
+        examPage.classList.remove("active");
+        homePage.classList.add("active");
+        resultsSection.style.display = "none";
+      });
+
+      // Display results when clicking "Display"
+      displayBtn.addEventListener("click", function() {
+        resultsSection.style.display = "block";
+      });
     });
   </script>
 </body>
