@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <title>myUNISA – Examination Results</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Hide the results section initially */
+    .results {
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -50,12 +56,12 @@
       </select>
 
       <div class="buttons">
-        <button type="button" class="btn grey">Display</button>
+        <button type="button" class="btn grey" id="displayBtn">Display</button>
         <button type="button" class="btn grey">Apply for Exam Script Remark</button>
       </div>
     </form>
 
-    <section class="results">
+    <section class="results" id="resultsSection">
       <h3>Results for 29077974 extracted on 2025-08-07 19:06</h3>
       <table>
         <thead>
@@ -78,25 +84,23 @@
           </tr>
           <tr>
             <td><a href="#">PUB1502</a></td>
-            <td>69</td>
+            <td>59</td>
             <td>Passed</td>
           </tr>
           <tr>
             <td><a href="#">PUB1503</a></td>
-            <td>79</td>
+            <td>63</td>
             <td>Passed</td>
           </tr>
           <tr>
             <td><a href="#">PUB1504</a></td>
-            <td>67</td>
+            <td>55</td>
             <td>Passed</td>
           </tr>
         </tbody>
       </table>
     </section>
   </main>
-</body>
-</html>
 
   <!-- Footer -->
   <footer class="footer">
@@ -111,5 +115,13 @@
          Copyright<br>
          University of South Africa</p>
     </div>
-   
   </footer>
+
+  <!-- Script to show results -->
+  <script>
+    document.getElementById('displayBtn').addEventListener('click', function() {
+      document.getElementById('resultsSection').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
